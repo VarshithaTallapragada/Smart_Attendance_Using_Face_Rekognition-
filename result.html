@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recognition Result</title>
+</head>
+<body>
+    <h1>Recognition Result</h1>
+    {% if recognized_faces %}
+        <p>Recognized Faces:</p>
+        <ul>
+            {% for face in recognized_faces %}
+                <li>{{ face }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>{{ error }}</p>
+    {% endif %}
+    <a href="/">Go Back</a>
+</body>
+</html>
